@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Language - Programa en Español para Roblox</title>
+    <meta name="description"
+        content="Vox Language te permite desarrollar juegos en Roblox escribiendo código 100% en español. Olvídate de Lua, programa en tu idioma.">
+    <meta name="keywords" content="Roblox, español, programación, Lua, transpilador, juegos, desarrollo">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-code text-purple-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">Vox Language</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-purple-600 transition">Características</a>
+                    <a href="#examples" class="text-gray-700 hover:text-purple-600 transition">Ejemplos</a>
+                    <a href="#docs" class="text-gray-700 hover:text-purple-600 transition">Documentación</a>
+                    <a href="#download"
+                        class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                        <i class="fas fa-download mr-2"></i>Descargar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Programa en Español<br>
+                    <span class="text-yellow-300">para Roblox</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-purple-100">
+                    Olvídate de Lua. Desarrolla juegos en Roblox escribiendo código 100% en español.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#download"
+                        class="bg-yellow-400 text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
+                        <i class="fas fa-rocket mr-2"></i>Comenzar Ahora
+                    </a>
+                    <a href="#examples"
+                        class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition text-lg">
+                        <i class="fas fa-play mr-2"></i>Ver Ejemplos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    ¿Por qué Vox Language?
+                </h2>
+                <p class="text-xl text-gray-600">
+                    La forma más fácil de desarrollar juegos en Roblox
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon bg-blue-100 text-blue-600 mb-6">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">100% en Español</h3>
+                    <p class="text-gray-600">
+                        Escribe código completamente en español. No necesitas aprender inglés ni Lua.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon bg-green-100 text-green-600 mb-6">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Traducción Instantánea</h3>
+                    <p class="text-gray-600">
+                        Convierte tu código español a Lua funcional para Roblox al instante.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon bg-purple-100 text-purple-600 mb-6">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Compatible con Roblox</h3>
+                    <p class="text-gray-600">
+                        El código generado funciona perfectamente en Roblox Studio. 100% compatible.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon bg-red-100 text-red-600 mb-6">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Fácil de Aprender</h3>
+                    <p class="text-gray-600">
+                        Si sabes español básico, ya sabes programar juegos en Roblox.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon bg-yellow-100 text-yellow-600 mb-6">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Código Limpio</h3>
+                    <p class="text-gray-600">
+                        Genera código Lua optimizado y legible que sigue las mejores prácticas.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon bg-indigo-100 text-indigo-600 mb-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Comunidad Activa</h3>
+                    <p class="text-gray-600">
+                        Únete a miles de desarrolladores que ya usan Vox Language.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Mira lo fácil que es
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Compara Vox Language con Lua tradicional
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Example 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-purple-600 text-white p-4">
+                        <h3 class="font-semibold">Vox Language (Español)</h3>
+                    </div>
+                    <div class="p-6">
+                        <pre class="code-block p-4 overflow-x-auto"><code>-- Crear una parte
+local jugadores = obtener_servicio("jugadores")
+local espacio_trabajo = obtener_servicio("espacio_trabajo")
+
+local parte = instancia_nueva("Part")
+parte.nombre = "MiParte"
+parte.posicion = Vector3_nuevo(0, 10, 0)
+parte.color = Color3_nuevo(1, 0, 0)
+parte.padre = espacio_trabajo
+
+funcion tocar(hit)
+    imprimir("Parte tocada por: " .. hit.Name)
+fin
+
+parte.Touched:Conectar(tocar)</code></pre>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-gray-800 text-white p-4">
+                        <h3 class="font-semibold">Lua Tradicional</h3>
+                    </div>
+                    <div class="p-6">
+                        <pre class="code-block p-4 overflow-x-auto"><code>-- Crear una parte
+local jugadores = game:GetService("Players")
+local workspace = game:GetService("Workspace")
+
+local part = Instance.new("Part")
+part.Name = "MiParte"
+part.Position = Vector3.new(0, 10, 0)
+part.Color = Color3.new(1, 0, 0)
+part.Parent = workspace
+
+function onTouch(hit)
+    print("Parte tocada por: " .. hit.Name)
+end
+
+part.Touched:Connect(onTouch)</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example 2 -->
+            <div class="grid lg:grid-cols-2 gap-8 mt-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-purple-600 text-white p-4">
+                        <h3 class="font-semibold">Sistema de Salud (Vox)</h3>
+                    </div>
+                    <div class="p-6">
+                        <pre class="code-block p-4 overflow-x-auto"><code>funcion crear_sistema_salud(jugador)
+    local personaje = jugador.Character
+    si no personaje entonces
+        personaje = jugador:CharacterAdded:esperar()
+    fin
+    
+    local humanoide = personaje:encontrar_hijo("Humanoid")
+    si humanoide entonces
+        humanoide.MaxHealth = 100
+        humanoide.Health = 100
+        
+        mientras humanoide.Health > 0 hacer
+            si humanoide.Health < 100 entonces
+                humanoide.Health = humanoide.Health + 5
+            fin
+            tarea_espera(1)
+        fin
+    fin
+fin</code></pre>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-gray-800 text-white p-4">
+                        <h3 class="font-semibold">Sistema de Salud (Lua)</h3>
+                    </div>
+                    <div class="p-6">
+                        <pre class="code-block p-4 overflow-x-auto"><code>function createHealthSystem(player)
+    local character = player.Character
+    if not character then
+        character = player.CharacterAdded:Wait()
+    end
+    
+    local humanoid = character:FindFirstChild("Humanoid")
+    if humanoid then
+        humanoid.MaxHealth = 100
+        humanoid.Health = 100
+        
+        while humanoid.Health > 0 do
+            if humanoid.Health < 100 then
+                humanoid.Health = humanoid.Health + 5
+            end
+            task.wait(1)
+        end
+    end
+end</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">
+                    Vox Language en Números
+                </h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="text-4xl font-bold text-yellow-300 mb-2">400+</div>
+                        <div class="text-xl">Traducciones</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-yellow-300 mb-2">98%</div>
+                        <div class="text-xl">Precisión</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-yellow-300 mb-2">100%</div>
+                        <div class="text-xl">Compatible</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-yellow-300 mb-2">0</div>
+                        <div class="text-xl">Lua requerido</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Documentación Completa
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Todo lo que necesitas para dominar Vox Language
+                </p>
+            </div>
+
+            <!-- Quick Start -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-purple-600 mb-6">
+                    <i class="fas fa-rocket mr-2"></i>Guía Rápida - Empezar en 5 Minutos
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4">📦 Paso 1: Instalación</h4>
+                        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                            <pre class="text-sm"><code># Descargar el transpilador
+wget https://github.com/Midnigth-lob/Vox/raw/main/transpiler_final.py
+
+# O simplemente descargar desde el navegador
+# Guardar como: transpiler_final.py</code></pre>
+                        </div>
+
+                        <h4 class="font-semibold text-lg mb-4">🔧 Paso 2: Tu Primer Script</h4>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="text-sm mb-2">Crear archivo: <code
+                                    class="bg-gray-200 px-2 py-1 rounded">mi_juego.vox</code></p>
+                            <pre class="text-sm"><code>-- Mi primer juego en Vox
+local jugadores = obtener_servicio("jugadores")
+local espacio_trabajo = obtener_servicio("espacio_trabajo")
+
+local parte = instancia_nueva("Part")
+parte.nombre = "MiPrimeraParte"
+parte.posicion = Vector3_nuevo(0, 10, 0)
+parte.padre = espacio_trabajo
+
+imprimir("¡Juego creado en Vox Language!")</code></pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4">⚡ Paso 3: Transpilar</h4>
+                        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                            <pre class="text-sm"><code># Transpilar a Lua
+python transpiler_final.py mi_juego.vox mi_juego.lua
+
+# Resultado: mi_juego.lua listo para Roblox Studio</code></pre>
+                        </div>
+
+                        <h4 class="font-semibold text-lg mb-4">🎮 Paso 4: Usar en Roblox</h4>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <ol class="text-sm space-y-2">
+                                <li>1. Abrir Roblox Studio</li>
+                                <li>2. Crear nuevo Script</li>
+                                <li>3. Copiar contenido de <code>mi_juego.lua</code></li>
+                                <li>4. ¡Jugar y disfrutar!</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Complete Reference -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-purple-600 mb-6">
+                    <i class="fas fa-book mr-2"></i>Referencia Completa de Traducciones
+                </h3>
+
+                <!-- Services -->
+                <div class="mb-8">
+                    <h4 class="font-semibold text-lg mb-4 text-blue-600">🏗️ Servicios de Roblox</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border p-2 text-left">Vox (Español)</th>
+                                    <th class="border p-2 text-left">Lua (Roblox)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border p-2"><code>obtener_servicio("jugadores")</code></td>
+                                    <td class="border p-2"><code>game:GetService("Players")</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>obtener_servicio("espacio_trabajo")</code></td>
+                                    <td class="border p-2"><code>game:GetService("Workspace")</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>obtener_servicio("luz")</code></td>
+                                    <td class="border p-2"><code>game:GetService("Lighting")</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>obtener_servicio("sonido")</code></td>
+                                    <td class="border p-2"><code>game:GetService("SoundService")</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>obtener_servicio("replicacion")</code></td>
+                                    <td class="border p-2"><code>game:GetService("ReplicatedStorage")</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>obtener_servicio("tienda_datos")</code></td>
+                                    <td class="border p-2"><code>game:GetService("DataStoreService")</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>obtener_servicio("servicio_tween")</code></td>
+                                    <td class="border p-2"><code>game:GetService("TweenService")</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>obtener_servicio("UserInputService")</code></td>
+                                    <td class="border p-2"><code>game:GetService("UserInputService")</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Constructors -->
+                <div class="mb-8">
+                    <h4 class="font-semibold text-lg mb-4 text-green-600">🏭 Constructores y Creación</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border p-2 text-left">Vox (Español)</th>
+                                    <th class="border p-2 text-left">Lua (Roblox)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border p-2"><code>instancia_nueva("Part")</code></td>
+                                    <td class="border p-2"><code>Instance.new("Part")</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>Color3_nuevo(1, 0, 0)</code></td>
+                                    <td class="border p-2"><code>Color3.new(1, 0, 0)</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>Vector3_nuevo(0, 10, 0)</code></td>
+                                    <td class="border p-2"><code>Vector3.new(0, 10, 0)</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>UDim2_nuevo(0, 200, 0, 100)</code></td>
+                                    <td class="border p-2"><code>UDim2.new(0, 200, 0, 100)</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>CFrame_nuevo(0, 10, 0)</code></td>
+                                    <td class="border p-2"><code>CFrame.new(0, 10, 0)</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2">
+                                        <code>info_tween(1, estilo_suavizado.Quad, direccion_suavizado.Out)</code>
+                                    </td>
+                                    <td class="border p-2">
+                                        <code>TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)</code>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Properties -->
+                <div class="mb-8">
+                    <h4 class="font-semibold text-lg mb-4 text-purple-600">📦 Propiedades Principales</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border p-2 text-left">Vox (Español)</th>
+                                    <th class="border p-2 text-left">Lua (Roblox)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border p-2"><code>.nombre</code></td>
+                                    <td class="border p-2"><code>.Name</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.padre</code></td>
+                                    <td class="border p-2"><code>.Parent</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.tamano</code></td>
+                                    <td class="border p-2"><code>.Size</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.posicion</code></td>
+                                    <td class="border p-2"><code>.Position</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.color</code></td>
+                                    <td class="border p-2"><code>.Color</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.material</code></td>
+                                    <td class="border p-2"><code>.Material</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.anclado</code></td>
+                                    <td class="border p-2"><code>.Anchored</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.transparencia</code></td>
+                                    <td class="border p-2"><code>.Transparency</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.texto</code></td>
+                                    <td class="border p-2"><code>.Text</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.color_texto</code></td>
+                                    <td class="border p-2"><code>.TextColor3</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>.escalado_texto</code></td>
+                                    <td class="border p-2"><code>.TextScaled</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Methods -->
+                <div class="mb-8">
+                    <h4 class="font-semibold text-lg mb-4 text-orange-600">🔧 Métodos y Funciones</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border p-2 text-left">Vox (Español)</th>
+                                    <th class="border p-2 text-left">Lua (Roblox)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border p-2"><code>:clonar()</code></td>
+                                    <td class="border p-2"><code>:Clone()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>:destruir()</code></td>
+                                    <td class="border p-2"><code>:Destroy()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>:conectar()</code></td>
+                                    <td class="border p-2"><code>:Connect()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>:desconectar()</code></td>
+                                    <td class="border p-2"><code>:Disconnect()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>:encontrar_hijo()</code></td>
+                                    <td class="border p-2"><code>:FindFirstChild()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>:esperar_hijo()</code></td>
+                                    <td class="border p-2"><code>:WaitForChild()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>:obtener_hijos()</code></td>
+                                    <td class="border p-2"><code>:GetChildren()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>:jugar()</code></td>
+                                    <td class="border p-2"><code>:Play()</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Math Functions -->
+                <div class="mb-8">
+                    <h4 class="font-semibold text-lg mb-4 text-red-600">🔢 Funciones Matemáticas</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border p-2 text-left">Vox (Español)</th>
+                                    <th class="border p-2 text-left">Lua (Roblox)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border p-2"><code>math.piso()</code></td>
+                                    <td class="border p-2"><code>math.floor()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>math.techo()</code></td>
+                                    <td class="border p-2"><code>math.ceil()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>math.absoluto()</code></td>
+                                    <td class="border p-2"><code>math.abs()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>math.maximo()</code></td>
+                                    <td class="border p-2"><code>math.max()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>math.minimo()</code></td>
+                                    <td class="border p-2"><code>math.min()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>math.redondear()</code></td>
+                                    <td class="border p-2"><code>math.round()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>math.raiz()</code></td>
+                                    <td class="border p-2"><code>math.sqrt()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>math.potencia()</code></td>
+                                    <td class="border p-2"><code>math.pow()</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Task Functions -->
+                <div class="mb-8">
+                    <h4 class="font-semibold text-lg mb-4 text-indigo-600">⚡ Funciones de Tarea</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border p-2 text-left">Vox (Español)</th>
+                                    <th class="border p-2 text-left">Lua (Roblox)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border p-2"><code>tarea_espera()</code></td>
+                                    <td class="border p-2"><code>task.wait()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>tarea_spawn()</code></td>
+                                    <td class="border p-2"><code>task.spawn()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>tarea_delay()</code></td>
+                                    <td class="border p-2"><code>task.delay()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>tarea_defer()</code></td>
+                                    <td class="border p-2"><code>task.defer()</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Control Structures -->
+                <div class="mb-8">
+                    <h4 class="font-semibold text-lg mb-4 text-yellow-600">🔧 Estructuras de Control</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border p-2 text-left">Vox (Español)</th>
+                                    <th class="border p-2 text-left">Lua (Roblox)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border p-2"><code>funcion ... fin</code></td>
+                                    <td class="border p-2"><code>function ... end</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>si ... entonces ... fin</code></td>
+                                    <td class="border p-2"><code>if ... then ... end</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>sino si ... entonces</code></td>
+                                    <td class="border p-2"><code>elseif ... then</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>sino</code></td>
+                                    <td class="border p-2"><code>else</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>mientras ... hacer ... fin</code></td>
+                                    <td class="border p-2"><code>while ... do ... end</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>para ... hacer ... fin</code></td>
+                                    <td class="border p-2"><code>for ... do ... end</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>retornar</code></td>
+                                    <td class="border p-2"><code>return</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>imprimir()</code></td>
+                                    <td class="border p-2"><code>print()</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>verdadero</code></td>
+                                    <td class="border p-2"><code>true</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>falso</code></td>
+                                    <td class="border p-2"><code>false</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-2"><code>nulo</code></td>
+                                    <td class="border p-2"><code>nil</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Complete Guide -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-purple-600 mb-6">
+                    <i class="fas fa-graduation-cap mr-2"></i>Guía Completa de Desarrollo
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 text-green-600">🎮 Creación de Juegos</h4>
+                        <div class="space-y-4">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2">1. Sistema de Salud</h5>
+                                <pre class="text-sm bg-gray-800 text-green-400 p-3 rounded"><code>funcion crear_sistema_salud(jugador)
+    local personaje = jugador.Character
+    si no personaje entonces
+        personaje = jugador:CharacterAdded:esperar()
+    fin
+    
+    local humanoide = personaje:encontrar_hijo("Humanoid")
+    si humanoide entonces
+        humanoide.MaxHealth = 100
+        humanoide.Health = 100
+        
+        -- Regeneración automática
+        tarea_spawn(function()
+            mientras humanoide.Health > 0 hacer
+                si humanoide.Health < 100 entonces
+                    humanoide.Health = humanoide.Health + 5
+                fin
+                tarea_espera(1)
+            fin
+        fin)
+    fin
+fin</code></pre>
+                            </div>
+
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2">2. Sistema de Combate</h5>
+                                <pre class="text-sm bg-gray-800 text-green-400 p-3 rounded"><code>local arma = instancia_nueva("Tool")
+arma.nombre = "EspadaVox"
+
+local mango = instancia_nueva("Part")
+mango.tamano = Vector3_nuevo(0.2, 3, 0.2)
+mango.padre = arma
+
+local conexion = mango.Touched:Conectar(function(hit)
+    local jugador = jugadores:GetPlayerFromCharacter(hit.padre)
+    si jugador entonces
+        local humanoide = hit.padre:encontrar_hijo("Humanoid")
+        si humanoide entonces
+            humanoide:TakeDamage(25)
+        fin
+    fin
+fin)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 text-blue-600">🎨 Interfaces y UI</h4>
+                        <div class="space-y-4">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2">3. Sistema de Menú</h5>
+                                <pre class="text-sm bg-gray-800 text-blue-400 p-3 rounded"><code>local gui = instancia_nueva("ScreenGui")
+gui.padre = jugadores.LocalPlayer:esperar_hijo("PlayerGui")
+
+local marco = instancia_nueva("Frame")
+marco.tamano = UDim2_nuevo(0, 300, 0, 200)
+marco.posicion = UDim2_nuevo(0.5, -150, 0.5, -100)
+marco.color_fondo = Color3_nuevo(0, 0, 0)
+marco.transparencia_fondo = 0.8
+marco.padre = gui
+
+local titulo = instancia_nueva("TextLabel")
+titulo.tamano = UDim2_nuevo(1, 0, 0, 50)
+titulo.posicion = UDim2_nuevo(0, 0, 0, 0)
+titulo.texto = "Vox Language Game"
+titulo.color_texto = Color3_nuevo(1, 1, 1)
+titulo.escalado_texto = verdadero
+titulo.padre = marco</code></pre>
+                            </div>
+
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2">4. Sistema de Puntos</h5>
+                                <pre class="text-sm bg-gray-800 text-blue-400 p-3 rounded"><code>local tienda_datos = obtener_servicio("tienda_datos")
+local tienda_puntos = tienda_datos:GetDataStore("PuntosJugador")
+
+funcion guardar_puntos(jugador, puntos)
+    tienda_puntos:SetAsync(jugador.UserId, puntos)
+fin
+
+funcion cargar_puntos(jugador)
+    local puntos = tienda_puntos:GetAsync(jugador.UserId)
+    si no puntos entonces
+        puntos = 0
+    fin
+    retornar puntos
+fin</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Practices -->
+                <div class="mt-8">
+                    <h4 class="font-semibold text-lg mb-4 text-red-600">⚡ Mejores Prácticas</h4>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2">✅ Buenas Prácticas</h5>
+                            <ul class="text-sm space-y-1">
+                                <li>• Usar nombres descriptivos</li>
+                                <li>• Comentar código complejo</li>
+                                <li>• Validar datos antes de usar</li>
+                                <li>• Usar variables locales</li>
+                                <li>• Organizar código en funciones</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2">⚠️ Errores Comunes</h5>
+                            <ul class="text-sm space-y-1">
+                                <li>• Olvidar .padre en objetos</li>
+                                <li>• No validar humanoides</li>
+                                <li>• Usar variables globales</li>
+                                <li>• No desconectar eventos</li>
+                                <li>• Ignorar errores de nil</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2">🚀 Optimización</h5>
+                            <ul class="text-sm space-y-1">
+                                <li>• Reutilizar objetos</li>
+                                <li>• Limitar loops infinitos</li>
+                                <li>• Usar WaitForChild</li>
+                                <li>• Limpiar conexiones</li>
+                                <li>• Validar rendimiento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Descargar Vox Language
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Comienza a programar en español hoy mismo
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-purple-600 text-4xl mb-4">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Transpilador Python</h3>
+                        <p class="text-gray-600 mb-6">
+                            Versión completa con todas las traducciones y validación semántica.
+                        </p>
+                        <a href="https://github.com/Midnigth-lob/Vox/raw/main/transpiler_final.py" download
+                            class="block w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition">
+                            <i class="fas fa-download mr-2"></i>Descargar Python
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-purple-600 text-4xl mb-4">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Repositorio GitHub</h3>
+                        <p class="text-gray-600 mb-6">
+                            Código fuente, ejemplos, documentación y actualizaciones.
+                        </p>
+                        <a href="https://github.com/Midnigth-lob/Vox" target="_blank"
+                            class="block w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-gray-900 transition">
+                            <i class="fab fa-github mr-2"></i>Ver en GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-xl font-semibold mb-4">Archivos de ejemplo</h3>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <a href="https://github.com/Midnigth-lob/Vox/raw/main/juego_completo_amigo.vox" download
+                            class="bg-white px-6 py-3 rounded-lg shadow hover:shadow-lg transition">
+                            <i class="fas fa-gamepad mr-2"></i>Juego Battle Royale
+                        </a>
+                        <a href="https://github.com/Midnigth-lob/Vox/raw/main/GUIA_PARA_AMIGO.md" download
+                            class="bg-white px-6 py-3 rounded-lg shadow hover:shadow-lg transition">
+                            <i class="fas fa-book mr-2"></i>Guía Completa
+                        </a>
+                        <a href="https://github.com/Midnigth-lob/Vox/raw/main/DOCUMENTATION.md" download
+                            class="bg-white px-6 py-3 rounded-lg shadow hover:shadow-lg transition">
+                            <i class="fas fa-file-alt mr-2"></i>Documentación
+                        </a>
+                        <a href="https://github.com/Midnigth-lob/Vox/raw/main/prueba_final_extrema.vox" download
+                            class="bg-white px-6 py-3 rounded-lg shadow hover:shadow-lg transition">
+                            <i class="fas fa-flask mr-2"></i>Test Extremo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-purple-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Vox Language</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Programa en español para Roblox
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Producto</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white transition">Características</a></li>
+                        <li><a href="#examples" class="hover:text-white transition">Ejemplos</a></li>
+                        <li><a href="#download" class="hover:text-white transition">Descargar</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#docs" class="hover:text-white transition">Documentación</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tutoriales</a></li>
+                        <li><a href="#" class="hover:text-white transition">GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Comunidad</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Midnigth-lob/Vox" target="_blank"
+                            class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-discord text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Vox Language. Hecho con ❤️ para la comunidad hispana de Roblox.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

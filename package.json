@@ -1,0 +1,226 @@
+{
+    "name": "vox-language",
+    "displayName": "Vox Language - Professional DSL",
+    "description": "Soporte profesional completo para Vox - DSL de Lua en español para Roblox con análisis semántico avanzado y detección de errores críticos",
+    "version": "1.2.9",
+    "icon": "vox_file_icon_128.png",
+    "publisher": "vox-studio",
+    "author": "Vox Studio",
+    "license": "MIT",
+    "homepage": "https://github.com/vox-studio/vox-language",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vox-studio/vox-language.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vox-studio/vox-language/issues"
+    },
+    "keywords": [
+        "vox",
+        "lua",
+        "roblox",
+        "dsl",
+        "spanish",
+        "español",
+        "transpiler",
+        "game development",
+        "semantic analysis",
+        "error detection",
+        "code validation"
+    ],
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Linters",
+        "Formatters"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "vox",
+                "aliases": [
+                    "Vox",
+                    "vox"
+                ],
+                "extensions": [
+                    ".vox"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./vox_file_icon_128.png",
+                    "dark": "./vox_file_icon_128.png"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "vox",
+                "scopeName": "source.vox",
+                "path": "./syntaxes/vox.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "vox",
+                "path": "./snippets/vox.json"
+            }
+        ],
+        "configuration": {
+            "title": "Vox Language Professional",
+            "properties": {
+                "vox.transpilerPath": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Ruta al transpilador de Vox (opcional, usa el transpilador integrado)",
+                    "scope": "resource"
+                },
+                "vox.autoTranspile": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Transpilar automáticamente al guardar",
+                    "scope": "resource"
+                },
+                "vox.enableSemanticAnalysis": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Habilitar análisis semántico avanzado para detección de errores críticos",
+                    "scope": "resource"
+                },
+                "vox.showValidationErrors": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Mostrar errores de validación en tiempo real",
+                    "scope": "resource"
+                },
+                "vox.autoSaveLua": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Guardar automáticamente el archivo Lua generado",
+                    "scope": "resource"
+                },
+                "vox.outputDirectory": {
+                    "type": "string",
+                    "default": "./",
+                    "description": "Directorio de salida para archivos Lua generados",
+                    "scope": "resource"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "vox.transpileFile",
+                "title": "Transpilar Archivo Vox",
+                "icon": "$(play)",
+                "category": "Vox"
+            },
+            {
+                "command": "vox.validateFile",
+                "title": "Validar Archivo Vox",
+                "icon": "$(check)",
+                "category": "Vox"
+            },
+            {
+                "command": "vox.showHelp",
+                "title": "Mostrar Ayuda de Vox",
+                "icon": "$(question)",
+                "category": "Vox"
+            },
+            {
+                "command": "vox.openDocumentation",
+                "title": "Abrir Documentación",
+                "icon": "$(book)",
+                "category": "Vox"
+            },
+            {
+                "command": "vox.createProject",
+                "title": "Crear Nuevo Proyecto Vox",
+                "icon": "$(file-add)",
+                "category": "Vox"
+            },
+            {
+                "command": "vox.toggleSemanticAnalysis",
+                "title": "Alternar Análisis Semántico",
+                "icon": "$(symbol-misc)",
+                "category": "Vox"
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "command": "vox.transpileFile",
+                    "when": "resourceExtname == .vox",
+                    "group": "navigation"
+                },
+                {
+                    "command": "vox.validateFile",
+                    "when": "resourceExtname == .vox",
+                    "group": "navigation"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "vox.transpileFile",
+                    "when": "resourceExtname == .vox",
+                    "group": "1_modification"
+                },
+                {
+                    "command": "vox.validateFile",
+                    "when": "resourceExtname == .vox",
+                    "group": "1_modification"
+                },
+                {
+                    "command": "vox.createProject",
+                    "when": "resourceExtname == .vox",
+                    "group": "2_workspace"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "vox.transpileFile",
+                    "when": "resourceExtname == .vox"
+                },
+                {
+                    "command": "vox.validateFile",
+                    "when": "resourceExtname == .vox"
+                }
+            ]
+        },
+        "keybindings": [
+            {
+                "command": "vox.transpileFile",
+                "key": "ctrl+shift+t",
+                "mac": "cmd+shift+t",
+                "when": "resourceExtname == .vox"
+            },
+            {
+                "command": "vox.validateFile",
+                "key": "ctrl+shift+v",
+                "mac": "cmd+shift+v",
+                "when": "resourceExtname == .vox"
+            },
+            {
+                "command": "vox.toggleSemanticAnalysis",
+                "key": "ctrl+shift+s",
+                "mac": "cmd+shift+s",
+                "when": "resourceExtname == .vox"
+            }
+        ]
+    },
+    "main": "./out/extension.js",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "package": "vsce package",
+        "publish": "vsce publish"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.85.0",
+        "@types/node": "20.x",
+        "typescript": "^5.3.3",
+        "@vscode/vsce": "^2.22.0"
+    }
+}

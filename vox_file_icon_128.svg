@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  
+  
+  <defs>
+    
+    
+    <!-- Gradiente principal potente -->
+    
+    
+    <linearGradient id="voxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1"/>
+      
+      
+      <stop offset="30%" style="stop-color:#F7931E;stop-opacity:1"/>
+      
+      
+      <stop offset="70%" style="stop-color:#FDC830;stop-opacity:1"/>
+      
+      
+      <stop offset="100%" style="stop-color:#FCE04A;stop-opacity:1"/>
+      
+    
+    </linearGradient>
+    
+    
+    
+    <!-- Gradiente para elementos -->
+    
+    
+    <linearGradient id="elementGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1"/>
+      
+      
+      <stop offset="100%" style="stop-color:#F8F8F8;stop-opacity:1"/>
+      
+    
+    </linearGradient>
+    
+    
+    
+    <!-- Efecto de brillo -->
+    
+    
+    <filter id="glow">
+      
+      
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      
+      
+      <feMerge>
+        
+        
+        <feMergeNode in="coloredBlur"/>
+        
+        
+        <feMergeNode in="SourceGraphic"/>
+        
+      
+      </feMerge>
+      
+    
+    </filter>
+    
+    
+    
+    <!-- Sombra principal -->
+    
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      
+      
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+      
+    
+    </filter>
+    
+    
+    
+    <!-- Sombra interior -->
+    
+    
+    <filter id="innerShadow">
+      
+      
+      <feOffset dx="0" dy="2"/>
+      
+      
+      <feGaussianBlur stdDeviation="2"/>
+      
+      
+      <feComposite operator="out" in2="SourceGraphic"/>
+      
+      
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+      
+    
+    </filter>
+    
+  
+  </defs>
+  
+  
+  
+  <!-- Fondo principal con esquinas redondeadas -->
+  
+  
+  <rect x="8" y="8" width="112" height="112" rx="12" fill="url(#voxGradient)" filter="url(#shadow)"/>
+  
+  
+  
+  <!-- Efecto de documento doblado -->
+  
+  
+  <path d="M 90 8 L 120 8 L 120 38 Z" fill="#FCE04A" opacity="0.9" filter="url(#innerShadow)"/>
+  
+  
+  
+  <!-- Círculo de fondo para el logo -->
+  
+  
+  <circle cx="64" cy="64" r="35" fill="rgba(255,255,255,0.15)" filter="url(#glow)"/>
+  
+  
+  
+  <!-- Logo VOX principal -->
+  
+  
+  <g transform="translate(64, 64)">
+    
+    
+    <!-- V grande y estilizada -->
+    
+    
+    <path d="M -20 -15 L -10 15 L 0 15 L 10 -15" stroke="url(#elementGradient)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    
+    
+    
+    <!-- O circular -->
+    
+    
+    <circle cx="0" cy="0" r="12" stroke="url(#elementGradient)" stroke-width="4" fill="none" filter="url(#glow)"/>
+    
+    
+    
+    <!-- X dinámica -->
+    
+    
+    <path d="M 10 -15 L 20 15 M 20 -15 L 10 15" stroke="url(#elementGradient)" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+    
+  
+  </g>
+  
+  
+  
+  <!-- Líneas de código decorativas -->
+  
+  
+  <g opacity="0.5">
+    
+    
+    <rect x="20" y="95" width="25" height="3" rx="1.5" fill="url(#elementGradient)"/>
+    
+    
+    <rect x="20" y="102" width="20" height="3" rx="1.5" fill="url(#elementGradient)"/>
+    
+    
+    <rect x="20" y="109" width="30" height="3" rx="1.5" fill="url(#elementGradient)"/>
+    
+    
+    
+    <rect x="83" y="95" width="25" height="3" rx="1.5" fill="url(#elementGradient)"/>
+    
+    
+    <rect x="88" y="102" width="20" height="3" rx="1.5" fill="url(#elementGradient)"/>
+    
+    
+    <rect x="83" y="109" width="30" height="3" rx="1.5" fill="url(#elementGradient)"/>
+    
+  
+  </g>
+  
+  
+  
+  <!-- Partículas flotantes animadas -->
+  
+  
+  <circle cx="25" cy="30" r="3" fill="rgba(255,255,255,0.8)" filter="url(#glow)">
+    
+    
+    <animate attributeName="cy" values="30;40;30" dur="3s" repeatCount="indefinite"/>
+    
+  
+  </circle>
+  
+  
+  
+  <circle cx="100" cy="35" r="2" fill="rgba(255,255,255,0.6)" filter="url(#glow)">
+    
+    
+    <animate attributeName="cy" values="35;45;35" dur="2.5s" repeatCount="indefinite"/>
+    
+  
+  </circle>
+  
+  
+  
+  <circle cx="30" cy="90" r="2.5" fill="rgba(255,255,255,0.7)" filter="url(#glow)">
+    
+    
+    <animate attributeName="cy" values="90;100;90" dur="2.8s" repeatCount="indefinite"/>
+    
+  
+  </circle>
+  
+  
+  
+  <circle cx="95" cy="85" r="2" fill="rgba(255,255,255,0.6)" filter="url(#glow)">
+    
+    
+    <animate attributeName="cy" values="85;95;85" dur="3.2s" repeatCount="indefinite"/>
+    
+  
+  </circle>
+  
+  
+  
+  <!-- Elemento distintivo Vox -->
+  
+  
+  <g transform="translate(105, 25)">
+    
+    
+    <circle cx="0" cy="0" r="8" fill="#FF6B35" opacity="0.9" filter="url(#glow)"/>
+    
+    
+    <text x="0" y="3" font-family="Arial Black, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">V</text>
+    
+  
+  </g>
+  
+
+</svg>
